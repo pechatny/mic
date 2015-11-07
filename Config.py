@@ -13,4 +13,4 @@ class Config():
         for section in sections:
             params = config.options(section)
             for param in params:
-                __setattr__= param = config.get(section, param)
+                setattr(self, param, config.get(section, param))
